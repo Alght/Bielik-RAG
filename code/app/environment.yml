@@ -1,0 +1,150 @@
+llm:
+  system:
+    huggingface_token: redacted
+
+  common:
+    model_revision: 73f5f7fb9a79a4409d02740155a3868c1ff0d2bc
+    model_dtype: torch.float16
+    torch_dtype: torch.float16
+    embedding_model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+    embedding_revision: e8f8c211226b894fcb81acc59f3b34ba3efd5f42
+    chunk_size: 1000
+    chunk_overlap: 200
+    generation:
+      max_new_tokens: 250
+      pad_token_id: 2
+      eos_token_id: [32001, 2]
+      temperature: 1.0
+      top_p: 1.0
+      top_k: 50
+      do_sample: false
+      seed: 10622516036899522780
+
+  models:
+# ----------------------------------------------------------------------------------------
+#   Configurations with RAG enabled and varying chunk sizes
+# ----------------------------------------------------------------------------------------
+
+    bielik11-268-cpu-rag-20-prompt-1:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 20
+      use_rag: true
+      prompt_id: 1
+
+# ----------------------------------------------------------------------------------------
+
+    bielik11-268-cpu-rag-10-prompt-1:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 10
+      use_rag: true
+      prompt_id: 1
+
+# ----------------------------------------------------------------------------------------
+
+    bielik11-268-cpu-rag-07-prompt-1:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 7
+      use_rag: true
+      prompt_id: 1
+
+    bielik11-268-cpu-rag-07-prompt-2:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 7
+      use_rag: true
+      prompt_id: 2
+
+    bielik11-268-cpu-rag-07-prompt-3:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 7
+      use_rag: true
+      prompt_id: 3
+
+# ----------------------------------------------------------------------------------------
+
+    bielik11-268-cpu-rag-05-prompt-1:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 5
+      use_rag: true
+      prompt_id: 1
+
+    bielik11-268-cpu-rag-05-prompt-2:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 5
+      use_rag: true
+      prompt_id: 2
+
+    bielik11-268-cpu-rag-05-prompt-3:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 5
+      use_rag: true
+      prompt_id: 3
+
+# ----------------------------------------------------------------------------------------
+
+    bielik11-268-cpu-rag-03-prompt-1:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 3
+      use_rag: true
+      prompt_id: 1
+
+    bielik11-268-cpu-rag-03-prompt-2:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 3
+      use_rag: true
+      prompt_id: 2
+
+    bielik11-268-cpu-rag-03-prompt-3:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 3
+      use_rag: true
+      prompt_id: 3
+
+# ----------------------------------------------------------------------------------------
+#   Configurations with RAG disabled and varying chunk sizes
+# ----------------------------------------------------------------------------------------
+
+    bielik11-268-cpu-norag-prompt-1:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 0
+      use_rag: false
+      prompt_id: 1
+
+    bielik11-268-cpu-norag-prompt-2:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 0
+      use_rag: false
+      prompt_id: 2
+
+    bielik11-268-cpu-norag-prompt-3:
+      model_name_basic: Bielik
+      model_name: speakleash/Bielik-11B-v2.3-Instruct
+      input_csv: /data/dataset_268.csv
+      chunks_no: 0
+      use_rag: false
+      prompt_id: 3

@@ -1,0 +1,88 @@
+import logging
+import torch
+import sentencepiece
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from huggingface_hub import login
+import pandas as pd
+from transformers import pipeline
+import os
+from ruamel.yaml import YAML
+
+logging.basicConfig(level=logging.DEBUG)
+
+hf_token = os.getenv("HUGGINGFACE_TOKEN")
+input_csv = os.getenv("INPUT_CSV")
+
+if hf_token:
+    login(token=hf_token)
+
+model_name = os.getenv("MODEL_NAME")
+model_name_basic = os.getenv("MODEL_NAME_BASIC")
+
+output_csv_plain = f"data_classified_text_{model_name_basic}.csv"
+
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
+
+if torch.cuda.is_available():
+    logging.info(f"GPU: {torch.cuda.get_device_name(0)} is available.")
+    device = torch.device("cuda")
+else:
+    logging.info("No GPU available. Training will run on CPU.")
+    device = torch.device("cpu")
+
+
+model.to(device)
+
+def classify_text(text):
+    try:
+        prompt = f"Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: '{text}'. Podaj zwięźle w jednej linijce jakie czyny zabronione zostały dokonane i podaj dokładny podpunkt Kodeksu Karnego, który je reguluje, i jego treść. Jeśli Kodeksu Karnego nie dotyczy tej sytuacji - napisz 'Nie dotyczy' bez dalszego komentarza"
+
+        inputs = tokenizer(prompt, return_tensors="pt").to(device)
+        with torch.no_grad():
+            outputs = model.generate(inputs['input_ids'],
+                                     max_length=150,
+                                     num_return_sequences=1,
+                                    temperature=0.7,
+                                    top_p=0.9)
+
+        result = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        result = result.replace("\n", " | ")
+        logging.debug(f"Model's Result: {result}")
+
+
+
+        return result
+    except Exception as e:
+        logging.error(f"Error occurred: {e}")
+        return "Error"
+
+
+
+def main():
+    logger.info("start classification...")
+
+    df = pd.read_csv(input_csv, sep=';')
+
+    results_to_plain = []
+    for _, row in df.iterrows():
+        text = row['Notatka']
+        text_id = row['ID']
+
+        result = classify_text(text)
+
+        results_to_plain.append({
+            'ID': text_id,
+            'Notatka': text,
+            f'{model_name_basic}(treść)': result
+        })
+
+
+    result_df_plain = pd.DataFrame(results_to_plain)
+    result_df_plain.to_csv(output_csv_plain, index=False, sep=';')
+
+    logger.info(f"Results saved to {output_csv_plain}")
+
+
+if __name__ == '__main__':
+    main()
