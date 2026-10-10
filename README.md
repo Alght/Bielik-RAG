@@ -1,33 +1,36 @@
 # Evaluating RAG-Based Legal Text Classification in Polish with Bielik-11B
 
-This repository contains code and configuration to run experiments to asses usage of RAG augmentation for classification of legal texts.
+This repository contains code and configuration to run experiments to assess the use of RAG augmentation for classifying legal texts.
 
 ## Tests architecture
 
-To provide static configuration tests are executed using docker containers. Containers are build with enumerated list of libraries to achieve repetability.
+To provide a static configuration, tests are executed using Docker containers. Containers are built with an enumerated list of libraries to achieve repeatability.
 
 ## Repository structure
 
-Repository contains:
+The repository contains:
 
 - execution scripts `models_*.sh`
-- `code` directory containinng
+- `code` directory containing
   - application in `code/application` directory
   - entry dataset as csv file in `code/data` directory
   - RAG sources as pdf file in `code/original_documents` directory
     - `KodeksKarny.pdf` file with Polish Penal Code
+- `example` directory with smoke tests results
 
 ## Test configuration
 
 All test configuration is placed in `code/app/environment.yml` file. It contains:
 
-- Access token to HuggingFace portal to download models
+- Access token for the Hugging Face portal to download models
 
 ```yaml
 llm:
   system:
-    huggingface_token:
+    huggingface_token: redacted
 ```
+
+Working `hugginface_token` is required to download Bielik model.
 
 - Common model settings
 
@@ -52,7 +55,7 @@ llm:
       seed: 10622516036899522780
 ```
 
-- Test scenarios definitions
+- Test scenario definitions (set of scenarios with syntax like this)
 
 ```yaml
 llm:
@@ -66,21 +69,21 @@ llm:
       prompt_id: 1
 ```
 
-Identifier of the scenario is used to name output files. It contains:
+The scenario identifier is used to name output files. It contains:
 
-- prefix `bielik11-268-cpu` - can be set freely
+- prefix `bielik11-4-cpu` - has contain set size (here 4)
 - scenario i.e. `rag-20`, `norag`
 - prompt id i.e. `prompt-1`. Prompt is embedded in main.py file and is chosen by id.
 
 ## Text execution
 
-To maintain tests the following scripts can be used. The content of the scripts can be modified accordingly to current test executions planned.
+The following scripts can be used to maintain the tests. Their contents can be modified to match the planned test executions.
 
 ### Models stop
 
-Script `models_stop.sh` provides ability to stop and destroy all currently run tests.
+The `models_stop.sh` script can stop and destroy all currently running tests.
 
-Script contains lines which stop the containers and remove them. MODEL_ID is the identifier existing in configuration.
+The script contains commands to stop and remove containers. `MODEL_ID` is an identifier defined in the configuration.
 
 ```bash
 MODEL_ID=bielik11-268-cpu-norag-prompt-1 ./code/app/stop.sh
@@ -88,16 +91,16 @@ MODEL_ID=bielik11-268-cpu-norag-prompt-1 ./code/app/stop.sh
 
 ### Models build
 
-Script `models_build.sh` privides ability to rebuild docker images used by tests.
+The `models_build.sh` script can rebuild the Docker images used by the tests.
 
-There are two kind of images created:
+Two kinds of images are created:
 
 - pytorch image `pytorch/pytorch`
 - test images i.e. `llm-classifier-bielik11-268-cpu-rag-10-prompt-1`.
 
-Each test configuration has own image. In general there are only tags to one common image.
+Each test configuration has its own image.
 
-Script contains lines which build containers.
+The script contains commands to build containers.
 
 ```bash
 MODEL_ID=bielik11-268-cpu-norag-prompt-1 ./code/app/build.sh
@@ -116,7 +119,46 @@ MODEL_ID=bielik11-268-cpu-norag-prompt-1 ./code/app/start.sh
 Tests create the following artifacts:
 
 - inference output in `code/output` directory as csv file
-- inverence auxialary information in `code/output` as jsonl file
+- inference auxiliary information in `code/output` as a JSONL file
 - log file from inference in `code/logs` directory
 
-Each scenario produces own file set named with scenario id prefix.
+Each scenario produces its own set of files, named with the scenario ID prefix.
+
+## Run example
+
+To run the example inferences, run the script:
+
+```bash
+./validation.sh
+```
+
+This script uses a smoke-test data file with 4 cases (2 positive and 2 negative, specially created for this test).
+
+- the data file is copied into the `code/data` directory
+- inference images are built
+- inference is run
+- output artifacts are copied into the `example/01.raw_data` directory.
+
+## Statistical analysis
+
+**Statistical analysis scripts are not included in this repository.** However, a full statistical analysis was performed on the proposed smoke-test dataset and results are shared.
+
+The `example/02_processed_data` directory contains raw data with posprocessed data usable for inference assessment.
+
+All data is stored in CSV files.
+
+| Directory | Content |
+| --- | --- |
+| `01.key` | Classification key file |
+| `02.inference_output` | Raw inference output |
+| `03.cleared_inference_output` | Normalized inference output with filtered original query |
+| `04.classification` | Classification results (TP, TN, FP, FN, ERROR, MISSING) |
+| `05.classification_errors` | Error cases containing no result, empty, ... |
+| `06.summarized results` | Results for each scenario (no-RAG, k=3, k=5, k=7, k=10 and k=20) combined for calculations |
+| `10.inference_logs` | Raw inference logs |
+| `11.inference_stats` | Inferences time execution metrics |
+| `12.retrieval_validation` | Statistics for retrieval validation |
+| `13.output_quality` | Statistics of well formed outputs and outputs which require post-processing |
+| `14.statistics` | Statistics including calculated MacNemar, Holm and other calculations |
+| `15.ablation_analysis` | Ablation analysis results |
+
