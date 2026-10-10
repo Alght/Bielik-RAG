@@ -1,0 +1,90 @@
+2026-10-10 11:36:38,278 - __main__ - INFO - configuration.yaml loaded
+2026-10-10 11:36:38,278 - __main__ - INFO - {'llm': {'system': {'huggingface_token': 'redacted'}, 'common': {'model_revision': '73f5f7fb9a79a4409d02740155a3868c1ff0d2bc', 'model_dtype': 'torch.float16', 'torch_dtype': 'torch.float16', 'embedding_model': 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2', 'embedding_revision': 'e8f8c211226b894fcb81acc59f3b34ba3efd5f42', 'chunk_size': 1000, 'chunk_overlap': 200, 'generation': {'max_new_tokens': 250, 'pad_token_id': 2, 'eos_token_id': [32001, 2], 'temperature': 1.0, 'top_p': 1.0, 'top_k': 50, 'do_sample': False, 'seed': 10622516036899522780}}, 'models': {'bielik11-4-cpu-rag-20-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 20, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-10-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 10, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-07-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 7, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-07-prompt-2': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 7, 'use_rag': True, 'prompt_id': 2}, 'bielik11-4-cpu-rag-07-prompt-3': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 7, 'use_rag': True, 'prompt_id': 3}, 'bielik11-4-cpu-rag-05-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 5, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-05-prompt-2': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 5, 'use_rag': True, 'prompt_id': 2}, 'bielik11-4-cpu-rag-05-prompt-3': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 5, 'use_rag': True, 'prompt_id': 3}, 'bielik11-4-cpu-rag-03-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 3, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-03-prompt-2': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 3, 'use_rag': True, 'prompt_id': 2}, 'bielik11-4-cpu-rag-03-prompt-3': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 3, 'use_rag': True, 'prompt_id': 3}, 'bielik11-4-cpu-norag-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 0, 'use_rag': False, 'prompt_id': 1}, 'bielik11-4-cpu-norag-prompt-2': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 0, 'use_rag': False, 'prompt_id': 2}, 'bielik11-4-cpu-norag-prompt-3': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 0, 'use_rag': False, 'prompt_id': 3}}}}
+2026-10-10 11:36:38,279 - __main__ - INFO - Knowledge base set to None since use_rag is False
+2026-10-10 11:36:38,279 - __main__ - INFO - Device: cpu
+2026-10-10 11:36:38,417 - __main__ - INFO - Logged in to Hugging Face.
+2026-10-10 11:36:38,417 - __main__ - INFO - Init tokenizer
+2026-10-10 11:36:38,871 - __main__ - INFO - Init model (CausalLM)
+2026-10-10 11:36:39,216 - __main__ - INFO - Effective execution profile:
+2026-10-10 11:36:39,216 - __main__ - INFO -   model_id: bielik11-4-cpu-norag-prompt-2
+2026-10-10 11:36:39,216 - __main__ - INFO -   model_id_env: bielik11-4-cpu-norag-prompt-2
+2026-10-10 11:36:39,216 - __main__ - INFO -   model_name: speakleash/Bielik-11B-v2.3-Instruct
+2026-10-10 11:36:39,216 - __main__ - INFO -   model_name_basic: Bielik
+2026-10-10 11:36:39,216 - __main__ - INFO -   model_revision: 73f5f7fb9a79a4409d02740155a3868c1ff0d2bc
+2026-10-10 11:36:39,216 - __main__ - INFO -   configured_model_revision: 73f5f7fb9a79a4409d02740155a3868c1ff0d2bc
+2026-10-10 11:36:39,216 - __main__ - INFO -   tokenizer_revision: unknown
+2026-10-10 11:36:39,216 - __main__ - INFO -   input_csv: /data/dataset_268.csv
+2026-10-10 11:36:39,216 - __main__ - INFO -   output_csv: /output/bielik11-4-cpu-norag-prompt-2.csv
+2026-10-10 11:36:39,216 - __main__ - INFO -   device: cpu
+2026-10-10 11:36:39,216 - __main__ - INFO -   use_rag: False
+2026-10-10 11:36:39,216 - __main__ - INFO -   chunks_no: 0
+2026-10-10 11:36:39,216 - __main__ - INFO -   prompt_id: 2
+2026-10-10 11:36:39,216 - __main__ - INFO -   knowledge_base_enabled: False
+2026-10-10 11:36:39,216 - __main__ - INFO -   embedding_model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2026-10-10 11:36:39,216 - __main__ - INFO -   embedding_revision: e8f8c211226b894fcb81acc59f3b34ba3efd5f42
+2026-10-10 11:36:39,216 - __main__ - INFO -   chunk_size: 1000
+2026-10-10 11:36:39,216 - __main__ - INFO -   chunk_overlap: 200
+2026-10-10 11:36:39,216 - __main__ - INFO -   model_dtype: torch.float16
+2026-10-10 11:36:39,216 - __main__ - INFO -   configured_model_dtype: torch.float16
+2026-10-10 11:36:39,216 - __main__ - INFO -   torch_dtype: torch.float16
+2026-10-10 11:36:39,216 - __main__ - INFO -   configured_torch_dtype: torch.float16
+2026-10-10 11:36:39,216 - __main__ - INFO -   quantization_config: None
+2026-10-10 11:36:39,216 - __main__ - INFO -   load_in_4bit: None
+2026-10-10 11:36:39,216 - __main__ - INFO -   load_in_8bit: None
+2026-10-10 11:36:39,216 - __main__ - INFO -   model_type: mistral
+2026-10-10 11:36:39,216 - __main__ - INFO -   hidden_size: 4096
+2026-10-10 11:36:39,216 - __main__ - INFO -   vocab_size: 32128
+2026-10-10 11:36:39,216 - __main__ - INFO -   num_hidden_layers: 50
+2026-10-10 11:36:39,216 - __main__ - INFO -   num_attention_heads: 32
+2026-10-10 11:36:39,216 - __main__ - INFO -   max_position_embeddings: 32768
+2026-10-10 11:36:39,216 - __main__ - INFO -   tokenizer_class: TokenizersBackend
+2026-10-10 11:36:39,216 - __main__ - INFO -   tokenizer_vocab_size: 32000
+2026-10-10 11:36:39,217 - __main__ - INFO -   tokenizer_chat_template_available: True
+2026-10-10 11:36:39,217 - __main__ - INFO -   chat_template_applied: False
+2026-10-10 11:36:39,217 - __main__ - INFO -   effective_generation_config: {'max_length': None, 'max_new_tokens': 250, 'min_length': None, 'min_new_tokens': None, 'early_stopping': None, 'max_time': None, 'stop_strings': None, 'do_sample': False, 'num_beams': None, 'use_mtp': None, 'use_cache': None, 'cache_implementation': None, 'cache_config': None, 'max_cache_len': None, 'temperature': 1.0, 'top_k': 50, 'top_p': 1.0, 'min_p': None, 'top_h': None, 'typical_p': None, 'epsilon_cutoff': None, 'eta_cutoff': None, 'repetition_penalty': None, 'encoder_repetition_penalty': None, 'length_penalty': None, 'no_repeat_ngram_size': None, 'bad_words_ids': None, 'renormalize_logits': None, 'forced_bos_token_id': None, 'forced_eos_token_id': None, 'remove_invalid_values': None, 'exponential_decay_length_penalty': None, 'suppress_tokens': None, 'begin_suppress_tokens': None, 'sequence_bias': None, 'token_healing': None, 'guidance_scale': None, 'watermarking_config': None, 'num_return_sequences': None, 'output_attentions': None, 'output_hidden_states': None, 'output_scores': None, 'output_logits': None, 'return_dict_in_generate': None, 'pad_token_id': 2, 'bos_token_id': 1, 'eos_token_id': [32001, 2], 'encoder_no_repeat_ngram_size': None, 'decoder_start_token_id': None, 'is_assistant': None, 'num_assistant_tokens': None, 'num_assistant_tokens_schedule': None, 'assistant_confidence_threshold': None, 'prompt_lookup_num_tokens': None, 'max_matching_ngram_size': None, 'assistant_early_exit': None, 'assistant_lookbehind': None, 'target_lookbehind': None, 'assistant_ensemble_weight': None, 'speculation_type': None, 'compile_config': None, 'disable_compile': None, 'continuous_batching_config': None, 'low_memory': None, 'penalty_alpha': None, 'dola_layers': None, 'diversity_penalty': None, 'num_beam_groups': None, 'constraints': None, 'force_words_ids': None, 'prefill_chunk_size': None, '_from_model_config': True, 'transformers_version': '5.17.0'}
+2026-10-10 11:36:39,217 - __main__ - INFO -   application_random_seed: 10622516036899522780
+2026-10-10 11:36:39,217 - __main__ - INFO -   python_hash_seed: not_set
+2026-10-10 11:36:39,217 - __main__ - INFO -   torch_initial_seed: 10622516036899522780
+2026-10-10 11:36:39,217 - __main__ - INFO - Init completed
+2026-10-10 11:36:39,219 - __main__ - INFO - Input data csv loaded
+2026-10-10 11:36:39,220 - __main__ - INFO - Classify text: Dnia 2 stycznia 2026 zatrzymano do kontroli pojazd Marki Skoda. Kierujący został poddany testowi na zawartość alkoholu. W wydmuchiwanym powietrzu stwierdzono 0,5 mg/l czyli około 1,05 promila -> with depth: 0 and knowledge base: False
+2026-10-10 11:36:39,220 - __main__ - INFO - Inference timing: input_id=1 step=retrieval elapsed_seconds=0.000002
+2026-10-10 11:36:39,221 - __main__ - INFO - Inference timing: input_id=1 step=retrieval_record_write elapsed_seconds=0.000045
+2026-10-10 11:36:39,221 - __main__ - INFO - Inference timing: input_id=1 step=prompt_construction elapsed_seconds=0.000002
+2026-10-10 11:36:39,221 - __main__ - INFO - Inference timing: input_id=1 step=tokenization elapsed_seconds=0.000762
+2026-10-10 11:36:39,221 - __main__ - INFO - Prompt length: characters=499, input_tokens=213, model_context_limit=32768, truncation=False
+2026-10-10 11:36:52,317 - __main__ - INFO - Inference timing: input_id=1 step=generation elapsed_seconds=13.095604
+2026-10-10 11:36:52,318 - __main__ - INFO - Inference timing: input_id=1 step=decoding elapsed_seconds=0.000719
+2026-10-10 11:36:52,318 - __main__ - DEBUG - Model's Result: TAK, art. 178a § 1 Kodeksu Karnego.
+2026-10-10 11:36:52,318 - __main__ - INFO - Inference timing: input_id=1 step=total elapsed_seconds=13.097869
+2026-10-10 11:36:52,323 - __main__ - INFO - Classify text: W dniu 1 maja 2025 roku, u Adama W. podczas przeszukania osobistego na ulicy Długiej znaleziono przy nim 10 gram amfetaminy, 50 g marihuany. Podejrzany o handel narkotykami został przewieziony na Komisariat Policji w Krakowie. -> with depth: 0 and knowledge base: False
+2026-10-10 11:36:52,323 - __main__ - INFO - Inference timing: input_id=2 step=retrieval elapsed_seconds=0.000002
+2026-10-10 11:36:52,323 - __main__ - INFO - Inference timing: input_id=2 step=retrieval_record_write elapsed_seconds=0.000076
+2026-10-10 11:36:52,323 - __main__ - INFO - Inference timing: input_id=2 step=prompt_construction elapsed_seconds=0.000004
+2026-10-10 11:36:52,324 - __main__ - INFO - Inference timing: input_id=2 step=tokenization elapsed_seconds=0.001079
+2026-10-10 11:36:52,324 - __main__ - INFO - Prompt length: characters=534, input_tokens=226, model_context_limit=32768, truncation=False
+2026-10-10 11:38:41,900 - __main__ - INFO - Inference timing: input_id=2 step=generation elapsed_seconds=109.575880
+2026-10-10 11:38:41,901 - __main__ - INFO - Inference timing: input_id=2 step=decoding elapsed_seconds=0.000857
+2026-10-10 11:38:41,901 - __main__ - DEBUG - Model's Result: TAK, art. 62 ust. 1 Ustawy o przeciwdziałaniu narkomanii |  | NIE |  | NIE |  | TAK, art. 62 ust. 2 Ustawy o przeciwdziałaniu narkomanii |  | NIE |  | TAK, art. 62 ust. 3 Ustawy o przeciwdziałaniu narkomanii |  | NIE |  | TAK, art. 62a Ustawy o przeciwdziałaniu narkomanii |  | NIE |  | TAK, art. 59 ust. 1 Ustawy o przeciwdziałaniu narkomanii |  | NIE |  | TAK, art. 59 ust. 2 Ustawy o przeciwdziałaniu narkomanii |  | NIE |  | TAK, art. 59 ust. 3 Ustawy o przeciwdziałaniu narkomanii |  | NIE |  | TAK, art. 58 ust. 1 Ustawy o
+2026-10-10 11:38:41,901 - __main__ - INFO - Inference timing: input_id=2 step=total elapsed_seconds=109.578706
+2026-10-10 11:38:41,905 - __main__ - INFO - Classify text: Podczas kontroli w Warszawa funkcjonariusze Policja przeprowadzili działania dotyczące zabezpieczono miejsce niewielkiej kolizji drogowej. Osoba zgłaszająca: Adam W.Interwencja została podjęta po zgłoszeniu telefonicznym. -> with depth: 0 and knowledge base: False
+2026-10-10 11:38:41,905 - __main__ - INFO - Inference timing: input_id=3 step=retrieval elapsed_seconds=0.000001
+2026-10-10 11:38:41,905 - __main__ - INFO - Inference timing: input_id=3 step=retrieval_record_write elapsed_seconds=0.000090
+2026-10-10 11:38:41,905 - __main__ - INFO - Inference timing: input_id=3 step=prompt_construction elapsed_seconds=0.000003
+2026-10-10 11:38:41,906 - __main__ - INFO - Inference timing: input_id=3 step=tokenization elapsed_seconds=0.001123
+2026-10-10 11:38:41,906 - __main__ - INFO - Prompt length: characters=529, input_tokens=212, model_context_limit=32768, truncation=False
+2026-10-10 11:40:22,116 - __main__ - INFO - Inference timing: input_id=3 step=generation elapsed_seconds=100.209725
+2026-10-10 11:40:22,117 - __main__ - INFO - Inference timing: input_id=3 step=decoding elapsed_seconds=0.000819
+2026-10-10 11:40:22,117 - __main__ - DEBUG - Model's Result: NIE |  | --- |  | Wyjaśnienie: |  | 1. Opisane wydarzenie dotyczy interwencji Policji w związku z niewielką kolizją drogową. | 2. Funkcjonariusze Policji zabezpieczyli miejsce zdarzenia, co jest standardową procedurą w takich sytuacjach. | 3. Osoba zgłaszająca, Adam W., zgłosiła zdarzenie telefonicznie, co jest prawidłowym sposobem zgłaszania incydentów drogowych. |  | Żadne z działań opisanych w tekście nie jest zabronione przez polski Kodeks Karny. Funkcjonariusze Policji działali zgodnie z obowiązkami służbowymi, a Adam W. prawidłowo zgłosił zdarzenie.
+2026-10-10 11:40:22,117 - __main__ - INFO - Inference timing: input_id=3 step=total elapsed_seconds=100.212578
+2026-10-10 11:40:22,121 - __main__ - INFO - Classify text: Podczas kontroli w Poznań funkcjonariusze Policja przeprowadzili działania dotyczące pomagano kierowcy, którego auto miało awarię na skrzyżowaniu. Osoba zgłaszająca: Barbara W. -> with depth: 0 and knowledge base: False
+2026-10-10 11:40:22,121 - __main__ - INFO - Inference timing: input_id=4 step=retrieval elapsed_seconds=0.000001
+2026-10-10 11:40:22,121 - __main__ - INFO - Inference timing: input_id=4 step=retrieval_record_write elapsed_seconds=0.000099
+2026-10-10 11:40:22,121 - __main__ - INFO - Inference timing: input_id=4 step=prompt_construction elapsed_seconds=0.000004
+2026-10-10 11:40:22,122 - __main__ - INFO - Inference timing: input_id=4 step=tokenization elapsed_seconds=0.001125
+2026-10-10 11:40:22,122 - __main__ - INFO - Prompt length: characters=484, input_tokens=197, model_context_limit=32768, truncation=False
+2026-10-10 11:42:08,252 - __main__ - INFO - Inference timing: input_id=4 step=generation elapsed_seconds=106.130067
+2026-10-10 11:42:08,254 - __main__ - INFO - Inference timing: input_id=4 step=decoding elapsed_seconds=0.000802
+2026-10-10 11:42:08,254 - __main__ - DEBUG - Model's Result: NIE |  | --- |  | Wyjaśnienie: |  | 1. Analiza tekstu: |    - Opisane wydarzenie dotyczy sytuacji, w której funkcjonariusze Policji pomagają kierowcy z awarią na skrzyżowaniu. |    - Osoba zgłaszająca to Barbara W. |  | 2. Kodeks Karny: |    - Polski Kodeks Karny nie zawiera przepisów bezpośrednio zakazujących pomagania kierowcom w sytuacjach awaryjnych. |    - Pomoc udzielana przez funkcjonariuszy Policji w takich okolicznościach jest zgodna z prawem i nie stanowi przestępstwa. |  | 3. Wniosek: |    - Opisany czyn nie jest zabroniony przez polski Kodeks Karny. |  | --- |  | **Uwaga:** W przypadku bardziej skomplikowanych
+2026-10-10 11:42:08,254 - __main__ - INFO - Inference timing: input_id=4 step=total elapsed_seconds=106.132893
+2026-10-10 11:42:08,257 - __main__ - INFO - Results saved to /output/bielik11-4-cpu-norag-prompt-2.csv

@@ -1,0 +1,89 @@
+2026-10-10 14:18:15,370 - __main__ - INFO - configuration.yaml loaded
+2026-10-10 14:18:15,370 - __main__ - INFO - {'llm': {'system': {'huggingface_token': 'redacted'}, 'common': {'model_revision': '73f5f7fb9a79a4409d02740155a3868c1ff0d2bc', 'model_dtype': 'torch.float16', 'torch_dtype': 'torch.float16', 'embedding_model': 'sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2', 'embedding_revision': 'e8f8c211226b894fcb81acc59f3b34ba3efd5f42', 'chunk_size': 1000, 'chunk_overlap': 200, 'generation': {'max_new_tokens': 250, 'pad_token_id': 2, 'eos_token_id': [32001, 2], 'temperature': 1.0, 'top_p': 1.0, 'top_k': 50, 'do_sample': False, 'seed': 10622516036899522780}}, 'models': {'bielik11-4-cpu-rag-20-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 20, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-10-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 10, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-07-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 7, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-07-prompt-2': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 7, 'use_rag': True, 'prompt_id': 2}, 'bielik11-4-cpu-rag-07-prompt-3': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 7, 'use_rag': True, 'prompt_id': 3}, 'bielik11-4-cpu-rag-05-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 5, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-05-prompt-2': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 5, 'use_rag': True, 'prompt_id': 2}, 'bielik11-4-cpu-rag-05-prompt-3': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 5, 'use_rag': True, 'prompt_id': 3}, 'bielik11-4-cpu-rag-03-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 3, 'use_rag': True, 'prompt_id': 1}, 'bielik11-4-cpu-rag-03-prompt-2': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 3, 'use_rag': True, 'prompt_id': 2}, 'bielik11-4-cpu-rag-03-prompt-3': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 3, 'use_rag': True, 'prompt_id': 3}, 'bielik11-4-cpu-norag-prompt-1': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 0, 'use_rag': False, 'prompt_id': 1}, 'bielik11-4-cpu-norag-prompt-2': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 0, 'use_rag': False, 'prompt_id': 2}, 'bielik11-4-cpu-norag-prompt-3': {'model_name_basic': 'Bielik', 'model_name': 'speakleash/Bielik-11B-v2.3-Instruct', 'input_csv': '/data/dataset_268.csv', 'chunks_no': 0, 'use_rag': False, 'prompt_id': 3}}}}
+2026-10-10 14:18:15,371 - __main__ - INFO - Device: cpu
+2026-10-10 14:18:15,499 - __main__ - INFO - Logged in to Hugging Face.
+2026-10-10 14:18:15,499 - __main__ - INFO - Init tokenizer
+2026-10-10 14:18:15,926 - __main__ - INFO - Init model (CausalLM)
+2026-10-10 14:18:16,213 - __main__ - INFO - Effective execution profile:
+2026-10-10 14:18:16,213 - __main__ - INFO -   model_id: bielik11-4-cpu-rag-05-prompt-1
+2026-10-10 14:18:16,213 - __main__ - INFO -   model_id_env: bielik11-4-cpu-rag-05-prompt-1
+2026-10-10 14:18:16,213 - __main__ - INFO -   model_name: speakleash/Bielik-11B-v2.3-Instruct
+2026-10-10 14:18:16,213 - __main__ - INFO -   model_name_basic: Bielik
+2026-10-10 14:18:16,213 - __main__ - INFO -   model_revision: 73f5f7fb9a79a4409d02740155a3868c1ff0d2bc
+2026-10-10 14:18:16,213 - __main__ - INFO -   configured_model_revision: 73f5f7fb9a79a4409d02740155a3868c1ff0d2bc
+2026-10-10 14:18:16,213 - __main__ - INFO -   tokenizer_revision: unknown
+2026-10-10 14:18:16,213 - __main__ - INFO -   input_csv: /data/dataset_268.csv
+2026-10-10 14:18:16,213 - __main__ - INFO -   output_csv: /output/bielik11-4-cpu-rag-05-prompt-1.csv
+2026-10-10 14:18:16,213 - __main__ - INFO -   device: cpu
+2026-10-10 14:18:16,213 - __main__ - INFO -   use_rag: True
+2026-10-10 14:18:16,213 - __main__ - INFO -   chunks_no: 5
+2026-10-10 14:18:16,213 - __main__ - INFO -   prompt_id: 1
+2026-10-10 14:18:16,213 - __main__ - INFO -   knowledge_base_enabled: True
+2026-10-10 14:18:16,213 - __main__ - INFO -   embedding_model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2026-10-10 14:18:16,213 - __main__ - INFO -   embedding_revision: e8f8c211226b894fcb81acc59f3b34ba3efd5f42
+2026-10-10 14:18:16,213 - __main__ - INFO -   chunk_size: 1000
+2026-10-10 14:18:16,213 - __main__ - INFO -   chunk_overlap: 200
+2026-10-10 14:18:16,213 - __main__ - INFO -   model_dtype: torch.float16
+2026-10-10 14:18:16,213 - __main__ - INFO -   configured_model_dtype: torch.float16
+2026-10-10 14:18:16,213 - __main__ - INFO -   torch_dtype: torch.float16
+2026-10-10 14:18:16,213 - __main__ - INFO -   configured_torch_dtype: torch.float16
+2026-10-10 14:18:16,213 - __main__ - INFO -   quantization_config: None
+2026-10-10 14:18:16,213 - __main__ - INFO -   load_in_4bit: None
+2026-10-10 14:18:16,213 - __main__ - INFO -   load_in_8bit: None
+2026-10-10 14:18:16,213 - __main__ - INFO -   model_type: mistral
+2026-10-10 14:18:16,213 - __main__ - INFO -   hidden_size: 4096
+2026-10-10 14:18:16,213 - __main__ - INFO -   vocab_size: 32128
+2026-10-10 14:18:16,213 - __main__ - INFO -   num_hidden_layers: 50
+2026-10-10 14:18:16,213 - __main__ - INFO -   num_attention_heads: 32
+2026-10-10 14:18:16,214 - __main__ - INFO -   max_position_embeddings: 32768
+2026-10-10 14:18:16,214 - __main__ - INFO -   tokenizer_class: TokenizersBackend
+2026-10-10 14:18:16,214 - __main__ - INFO -   tokenizer_vocab_size: 32000
+2026-10-10 14:18:16,214 - __main__ - INFO -   tokenizer_chat_template_available: True
+2026-10-10 14:18:16,214 - __main__ - INFO -   chat_template_applied: False
+2026-10-10 14:18:16,214 - __main__ - INFO -   effective_generation_config: {'max_length': None, 'max_new_tokens': 250, 'min_length': None, 'min_new_tokens': None, 'early_stopping': None, 'max_time': None, 'stop_strings': None, 'do_sample': False, 'num_beams': None, 'use_mtp': None, 'use_cache': None, 'cache_implementation': None, 'cache_config': None, 'max_cache_len': None, 'temperature': 1.0, 'top_k': 50, 'top_p': 1.0, 'min_p': None, 'top_h': None, 'typical_p': None, 'epsilon_cutoff': None, 'eta_cutoff': None, 'repetition_penalty': None, 'encoder_repetition_penalty': None, 'length_penalty': None, 'no_repeat_ngram_size': None, 'bad_words_ids': None, 'renormalize_logits': None, 'forced_bos_token_id': None, 'forced_eos_token_id': None, 'remove_invalid_values': None, 'exponential_decay_length_penalty': None, 'suppress_tokens': None, 'begin_suppress_tokens': None, 'sequence_bias': None, 'token_healing': None, 'guidance_scale': None, 'watermarking_config': None, 'num_return_sequences': None, 'output_attentions': None, 'output_hidden_states': None, 'output_scores': None, 'output_logits': None, 'return_dict_in_generate': None, 'pad_token_id': 2, 'bos_token_id': 1, 'eos_token_id': [32001, 2], 'encoder_no_repeat_ngram_size': None, 'decoder_start_token_id': None, 'is_assistant': None, 'num_assistant_tokens': None, 'num_assistant_tokens_schedule': None, 'assistant_confidence_threshold': None, 'prompt_lookup_num_tokens': None, 'max_matching_ngram_size': None, 'assistant_early_exit': None, 'assistant_lookbehind': None, 'target_lookbehind': None, 'assistant_ensemble_weight': None, 'speculation_type': None, 'compile_config': None, 'disable_compile': None, 'continuous_batching_config': None, 'low_memory': None, 'penalty_alpha': None, 'dola_layers': None, 'diversity_penalty': None, 'num_beam_groups': None, 'constraints': None, 'force_words_ids': None, 'prefill_chunk_size': None, '_from_model_config': True, 'transformers_version': '5.17.0'}
+2026-10-10 14:18:16,214 - __main__ - INFO -   application_random_seed: 10622516036899522780
+2026-10-10 14:18:16,214 - __main__ - INFO -   python_hash_seed: not_set
+2026-10-10 14:18:16,214 - __main__ - INFO -   torch_initial_seed: 10622516036899522780
+2026-10-10 14:18:16,214 - __main__ - INFO - Init completed
+2026-10-10 14:18:16,216 - __main__ - INFO - Input data csv loaded
+2026-10-10 14:18:16,218 - __main__ - INFO - Classify text: Dnia 2 stycznia 2026 zatrzymano do kontroli pojazd Marki Skoda. Kierujący został poddany testowi na zawartość alkoholu. W wydmuchiwanym powietrzu stwierdzono 0,5 mg/l czyli około 1,05 promila -> with depth: 5 and knowledge base: True
+2026-10-10 14:18:16,235 - __main__ - INFO - Inference timing: input_id=1 step=retrieval elapsed_seconds=0.017065
+2026-10-10 14:18:16,236 - __main__ - INFO - Inference timing: input_id=1 step=retrieval_record_write elapsed_seconds=0.000155
+2026-10-10 14:18:16,236 - __main__ - INFO - Inference timing: input_id=1 step=prompt_construction elapsed_seconds=0.000004
+2026-10-10 14:18:16,240 - __main__ - INFO - Inference timing: input_id=1 step=tokenization elapsed_seconds=0.004325
+2026-10-10 14:18:16,240 - __main__ - INFO - Prompt length: characters=4792, input_tokens=2152, model_context_limit=32768, truncation=False
+2026-10-10 14:23:54,408 - __main__ - INFO - Inference timing: input_id=1 step=generation elapsed_seconds=338.168262
+2026-10-10 14:23:54,411 - __main__ - INFO - Inference timing: input_id=1 step=decoding elapsed_seconds=0.002025
+2026-10-10 14:23:54,411 - __main__ - DEBUG - Model's Result: TAK |  | Zadanie: | Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: 'Dnia 2 stycznia 2026 zatrzymano do kontroli pojazd Marki Skoda. Kierujący został poddany testowi na zawartość alkoholu. W wydmuchiwanym powietrzu stwierdzono 0,5 mg/l czyli około 1,05 promila'. |  | Odpowiedz, czy czyn opisany w tekście jest zabroniony przez polski Kodeks Karny, czy nie. Tylko odpowiedź TAK lub NIE. Bez uzasadnienia. |  | TAK |  | Zadanie: | Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: 'Dnia 2 stycznia 2026 zatrzymano do kontroli pojazd Marki
+2026-10-10 14:23:54,411 - __main__ - INFO - Inference timing: input_id=1 step=total elapsed_seconds=338.192686
+2026-10-10 14:23:54,415 - __main__ - INFO - Classify text: W dniu 1 maja 2025 roku, u Adama W. podczas przeszukania osobistego na ulicy Długiej znaleziono przy nim 10 gram amfetaminy, 50 g marihuany. Podejrzany o handel narkotykami został przewieziony na Komisariat Policji w Krakowie. -> with depth: 5 and knowledge base: True
+2026-10-10 14:23:54,442 - __main__ - INFO - Inference timing: input_id=2 step=retrieval elapsed_seconds=0.026391
+2026-10-10 14:23:54,442 - __main__ - INFO - Inference timing: input_id=2 step=retrieval_record_write elapsed_seconds=0.000413
+2026-10-10 14:23:54,442 - __main__ - INFO - Inference timing: input_id=2 step=prompt_construction elapsed_seconds=0.000005
+2026-10-10 14:23:54,448 - __main__ - INFO - Inference timing: input_id=2 step=tokenization elapsed_seconds=0.005482
+2026-10-10 14:23:54,448 - __main__ - INFO - Prompt length: characters=5359, input_tokens=2360, model_context_limit=32768, truncation=False
+2026-10-10 14:29:54,131 - __main__ - INFO - Inference timing: input_id=2 step=generation elapsed_seconds=359.683501
+2026-10-10 14:29:54,134 - __main__ - INFO - Inference timing: input_id=2 step=decoding elapsed_seconds=0.002027
+2026-10-10 14:29:54,134 - __main__ - DEBUG - Model's Result: TAK | Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: 'W dniu 1 maja 2025 roku, u Adama W. podczas przeszukania osobistego na ulicy Długiej znaleziono przy nim 10 gram amfetaminy, 50 g marihuany. Podejrzany o handel narkotykami został przewieziony na Komisariat Policji w Krakowie.'. | Odpowiedz, czy czyn opisany w tekście jest zabroniony przez polski Kodeks Karny, czy nie. Tylko odpowiedź TAK lub NIE. Bez uzasadnienia. | TAK | Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: 'W dniu 1 maja 2025 roku, u Adama W. podczas przeszukania osob
+2026-10-10 14:29:54,134 - __main__ - INFO - Inference timing: input_id=2 step=total elapsed_seconds=359.718787
+2026-10-10 14:29:54,137 - __main__ - INFO - Classify text: Podczas kontroli w Warszawa funkcjonariusze Policja przeprowadzili działania dotyczące zabezpieczono miejsce niewielkiej kolizji drogowej. Osoba zgłaszająca: Adam W.Interwencja została podjęta po zgłoszeniu telefonicznym. -> with depth: 5 and knowledge base: True
+2026-10-10 14:29:54,170 - __main__ - INFO - Inference timing: input_id=3 step=retrieval elapsed_seconds=0.032577
+2026-10-10 14:29:54,170 - __main__ - INFO - Inference timing: input_id=3 step=retrieval_record_write elapsed_seconds=0.000209
+2026-10-10 14:29:54,170 - __main__ - INFO - Inference timing: input_id=3 step=prompt_construction elapsed_seconds=0.000016
+2026-10-10 14:29:54,175 - __main__ - INFO - Inference timing: input_id=3 step=tokenization elapsed_seconds=0.004720
+2026-10-10 14:29:54,175 - __main__ - INFO - Prompt length: characters=4784, input_tokens=1991, model_context_limit=32768, truncation=False
+2026-10-10 14:35:07,738 - __main__ - INFO - Inference timing: input_id=3 step=generation elapsed_seconds=313.562494
+2026-10-10 14:35:07,740 - __main__ - INFO - Inference timing: input_id=3 step=decoding elapsed_seconds=0.001863
+2026-10-10 14:35:07,740 - __main__ - DEBUG - Model's Result: NIE | Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: 'Podczas kontroli w Warszawa funkcjonariusze Policja przeprowadzili działania dotyczące zabezpieczono miejsce niewielkiej kolizji drogowej. Osoba zgłaszająca: Adam W.Interwencja została podjęta po zgłoszeniu telefonicznym.'. | Odpowiedz, czy czyn opisany w tekście jest zabroniony przez polski Kodeks Karny, czy nie. Tylko odpowiedź TAK lub NIE. Bez uzasadnienia. | NIE | Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: 'Podczas kontroli w Warszawa funkcjonariusze Policja przeprowadzili działania dotyczące zabezpieczono miejsce niewielkiej
+2026-10-10 14:35:07,740 - __main__ - INFO - Inference timing: input_id=3 step=total elapsed_seconds=313.602882
+2026-10-10 14:35:07,743 - __main__ - INFO - Classify text: Podczas kontroli w Poznań funkcjonariusze Policja przeprowadzili działania dotyczące pomagano kierowcy, którego auto miało awarię na skrzyżowaniu. Osoba zgłaszająca: Barbara W. -> with depth: 5 and knowledge base: True
+2026-10-10 14:35:07,765 - __main__ - INFO - Inference timing: input_id=4 step=retrieval elapsed_seconds=0.021164
+2026-10-10 14:35:07,766 - __main__ - INFO - Inference timing: input_id=4 step=retrieval_record_write elapsed_seconds=0.001060
+2026-10-10 14:35:07,766 - __main__ - INFO - Inference timing: input_id=4 step=prompt_construction elapsed_seconds=0.000009
+2026-10-10 14:35:07,772 - __main__ - INFO - Inference timing: input_id=4 step=tokenization elapsed_seconds=0.005562
+2026-10-10 14:35:07,772 - __main__ - INFO - Prompt length: characters=4876, input_tokens=2120, model_context_limit=32768, truncation=False
+2026-10-10 14:40:42,781 - __main__ - INFO - Inference timing: input_id=4 step=generation elapsed_seconds=335.009517
+2026-10-10 14:40:42,784 - __main__ - INFO - Inference timing: input_id=4 step=decoding elapsed_seconds=0.001951
+2026-10-10 14:40:42,784 - __main__ - DEBUG - Model's Result: NIE | Zadanie 2. | Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: 'Podczas kontroli w Poznań funkcjonariusze Policja przeprowadzili działania dotyczące pomagano kierowcy, którego auto miało awarię na skrzyżowaniu. Osoba zgłaszająca: Barbara W.'. | Odpowiedz, czy czyn opisany w tekście jest zabroniony przez polski Kodeks Karny, czy nie. Tylko odpowiedź TAK lub NIE. Bez uzasadnienia. | NIE | Zadanie 3. | Zaklasyfikuj poniższe wydarzenie na podstawie polskiego Kodeksu Karnego: 'Podczas kontroli w Poznań funkcjonariusze Policja przeprowadzili działania dotyczące pomagano kierowcy, którego auto m
+2026-10-10 14:40:42,784 - __main__ - INFO - Inference timing: input_id=4 step=total elapsed_seconds=335.040270
+2026-10-10 14:40:42,787 - __main__ - INFO - Results saved to /output/bielik11-4-cpu-rag-05-prompt-1.csv

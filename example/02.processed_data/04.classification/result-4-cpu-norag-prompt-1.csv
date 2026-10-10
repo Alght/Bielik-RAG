@@ -1,0 +1,5 @@
+PromptID;ID;Key;Classification;Calc
+1;1;positive;positive;TP
+1;2;positive;positive;TP
+1;3;positive;negative;FN
+1;4;positive;negative;FN
