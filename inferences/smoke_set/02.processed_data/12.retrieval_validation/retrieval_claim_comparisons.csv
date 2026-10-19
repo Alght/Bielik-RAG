@@ -1,0 +1,4 @@
+comparison_id,left_trace,right_trace,prefix_k_compared,comparison_available,shared_input_ids,identical_query_texts,complete_prefix_comparisons,ordered_chunk_hash_matches,ordered_chunk_hash_mismatches,incomplete_prefix_comparisons,hash_match_rate,source_documents_match,chunk_manifest_matches,faiss_index_hashes_match
+prompt_1_vs_prompt_2_k3,bielik11-4-cpu-rag-03-prompt-1_retrievals.jsonl,bielik11-4-cpu-rag-03-prompt-2_retrievals.jsonl,3,True,4,4,4,4,0,0,1.0,True,True,True
+prompt_2_vs_prompt_3_k5,bielik11-4-cpu-rag-05-prompt-2_retrievals.jsonl,bielik11-4-cpu-rag-05-prompt-3_retrievals.jsonl,5,True,4,4,4,4,0,0,1.0,True,True,True
+prompt_2_k3_vs_k5,bielik11-4-cpu-rag-03-prompt-2_retrievals.jsonl,bielik11-4-cpu-rag-05-prompt-2_retrievals.jsonl,3,True,4,4,4,4,0,0,1.0,True,True,True

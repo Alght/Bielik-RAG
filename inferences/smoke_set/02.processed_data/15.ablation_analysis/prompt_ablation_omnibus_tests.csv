@@ -1,0 +1,13 @@
+Scenario;Endpoint;N;CochranQ;DegreesFreedom;AsymptoticP;HolmAdjustedP;HolmFamilySize;SignificantAt005
+norag;effective_accuracy;4;0.000000;2;1.00000000;1.0;4;False
+norag;coverage;4;0.000000;2;1.00000000;1.0;4;False
+norag;classified_accuracy;4;0.000000;2;1.00000000;1.0;4;False
+k=3;effective_accuracy;4;0.000000;2;1.00000000;1.0;4;False
+k=3;coverage;4;0.000000;2;1.00000000;1.0;4;False
+k=3;classified_accuracy;4;0.000000;2;1.00000000;1.0;4;False
+k=5;effective_accuracy;4;0.000000;2;1.00000000;1.0;4;False
+k=5;coverage;4;0.000000;2;1.00000000;1.0;4;False
+k=5;classified_accuracy;4;0.000000;2;1.00000000;1.0;4;False
+k=7;effective_accuracy;4;0.000000;2;1.00000000;1.0;4;False
+k=7;coverage;4;0.000000;2;1.00000000;1.0;4;False
+k=7;classified_accuracy;4;0.000000;2;1.00000000;1.0;4;False

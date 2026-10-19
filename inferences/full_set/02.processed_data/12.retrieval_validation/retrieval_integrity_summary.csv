@@ -1,0 +1,2 @@
+trace_files,retrieval_query_records,rag_queries_checked,chunk_hashes_checked,chunk_hashes_matching_text,chunk_hash_errors,rank_entries_checked,rank_errors,distance_sequences_checked,distance_order_errors,rag_queries_returning_more_than_requested,distinct_source_pdf_hashes,distinct_chunk_manifest_hashes,distinct_faiss_index_hashes
+14,3752,2948,20100,20100,0,20100,0,2948,0,0,1,1,2

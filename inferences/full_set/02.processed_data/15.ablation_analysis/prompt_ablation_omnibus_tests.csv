@@ -1,0 +1,13 @@
+Scenario;Endpoint;N;CochranQ;DegreesFreedom;AsymptoticP;HolmAdjustedP;HolmFamilySize;SignificantAt005
+norag;effective_accuracy;268;3.500000;2;0.17377394;0.34754788;4;False
+norag;coverage;268;0.000000;2;1.00000000;1.0;4;False
+norag;classified_accuracy;268;3.500000;2;0.17377394;0.34754788;4;False
+k=3;effective_accuracy;268;7.523810;2;0.02323943;0.08837152;4;False
+k=3;coverage;268;2.000000;2;0.36787944;1.0;4;False
+k=3;classified_accuracy;267;8.400000;2;0.01499558;0.04498674;4;True
+k=5;effective_accuracy;268;7.625000;2;0.02209288;0.08837152;4;False
+k=5;coverage;268;2.000000;2;0.36787944;1.0;4;False
+k=5;classified_accuracy;267;10.000000;2;0.00673795;0.0269518;4;True
+k=7;effective_accuracy;268;1.636364;2;0.44123317;0.44123317;4;False
+k=7;coverage;268;4.000000;2;0.13533528;0.54134112;4;False
+k=7;classified_accuracy;266;2.666667;2;0.26359714;0.34754788;4;False

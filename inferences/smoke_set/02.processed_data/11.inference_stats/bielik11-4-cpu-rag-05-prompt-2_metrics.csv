@@ -1,0 +1,5 @@
+ID;RetrievalSeconds;RetrievalRecordWriteSeconds;PromptConstructionSeconds;TokenizationSeconds;GenerationSeconds;DecodingSeconds;InferenceSeconds
+1;0.018273;0.000155;0.000005;0.005027;357;0.002284;357
+2;0.028264;0.000953;0.000010;0.005997;367;0.003508;367
+3;0.037867;0.000186;0.000008;0.007260;333;0.002005;333
+4;0.027196;0.000204;0.000069;0.006245;352;0.002216;353

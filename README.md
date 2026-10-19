@@ -16,7 +16,9 @@ The repository contains:
   - entry dataset as csv file in `code/data` directory
   - RAG sources as pdf file in `code/original_documents` directory
     - `KodeksKarny.pdf` file with Polish Penal Code
-- `example` directory with smoke tests results
+- `inferences` directory with tests results
+  - `smoke_set` contains full set of data, logs and calculations for four elements simplified input
+  - `full_set` contains subset of data (not containing dataset details) of full passage of inferences and statistical analysis
 
 ## Test configuration
 
@@ -126,7 +128,7 @@ Each scenario produces its own set of files, named with the scenario ID prefix.
 
 ## Run example
 
-To run the example inferences, run the script:
+To run the example inferences, run the script (parameters have to be adjusted to current set):
 
 ```bash
 ./validation.sh
@@ -141,7 +143,7 @@ This script uses a smoke-test data file with 4 cases (2 positive and 2 negative,
 
 ## Statistical analysis
 
-**Statistical analysis scripts are not included in this repository.** However, a full statistical analysis was performed on the proposed smoke-test dataset and results are shared.
+Statistical analysis can be created by running script `run_postprocessing.sh`. Set size has to be set in `parameters.py` file.
 
 The `example/02_processed_data` directory contains raw data with posprocessed data usable for inference assessment.
 
@@ -161,4 +163,3 @@ All data is stored in CSV files.
 | `13.output_quality` | Statistics of well formed outputs and outputs which require post-processing |
 | `14.statistics` | Statistics including calculated MacNemar, Holm and other calculations |
 | `15.ablation_analysis` | Ablation analysis results |
-

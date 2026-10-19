@@ -1,0 +1,15 @@
+Run;PromptID;Scenario;CaseCount;MinimumInputTokens;MedianInputTokens;MaximumInputTokens;ModelContextLimit;MaxNewTokens
+bielik11-4-cpu-norag-prompt-1;1;norag;4;157;172.5;186;32768;250
+bielik11-4-cpu-norag-prompt-2;2;norag;4;197;212.5;226;32768;250
+bielik11-4-cpu-norag-prompt-3;3;norag;4;234;249.5;263;32768;250
+bielik11-4-cpu-rag-03-prompt-1;1;k=3;4;1142;1365.5;1464;32768;250
+bielik11-4-cpu-rag-03-prompt-2;2;k=3;4;1182;1405.5;1504;32768;250
+bielik11-4-cpu-rag-03-prompt-3;3;k=3;4;1219;1442.5;1541;32768;250
+bielik11-4-cpu-rag-05-prompt-1;1;k=5;4;1991;2136;2360;32768;250
+bielik11-4-cpu-rag-05-prompt-2;2;k=5;4;2031;2176;2400;32768;250
+bielik11-4-cpu-rag-05-prompt-3;3;k=5;4;2068;2213;2437;32768;250
+bielik11-4-cpu-rag-07-prompt-1;1;k=7;4;2627;2957;3035;32768;250
+bielik11-4-cpu-rag-07-prompt-2;2;k=7;4;2667;2997;3075;32768;250
+bielik11-4-cpu-rag-07-prompt-3;3;k=7;4;2704;3034;3112;32768;250
+bielik11-4-cpu-rag-10-prompt-1;1;k=10;4;3888;4152.5;4346;32768;250
+bielik11-4-cpu-rag-20-prompt-1;1;k=20;4;7779;7954;8290;32768;250
